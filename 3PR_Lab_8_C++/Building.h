@@ -10,6 +10,8 @@ using namespace std;
 class Building
 {
 private:
+	// Количество созданных зданий.
+	static int countOfBuildings;
 	// Тип здания.
 	string typeOfBuilding;
 	// Длина стороны основания.
@@ -36,11 +38,24 @@ private:
 	}
 public:
 	static string companyName;
+
+	static int getCountOfBuildings()
+	{
+		return countOfBuildings;
+	}
+
+	Building()
+	{
+		initBuilding(*this);
+		countOfBuildings++;
+	}
+
 	/* Функция по выводу свойств экземпляра класса Building. */
 	void getBuilding()
 	{
 		cout << "Свойства данного здания:" << endl;
 		cout << "Название строительной компании: " << companyName << endl;
+		cout << "Общее количество зданий этой компании: " << countOfBuildings << endl;
 		cout << "Тип здания: " << typeOfBuilding << endl;
 		cout << "Длина стороны основания: " << sideLength << endl;
 		cout << "Высота фундамента: " << basementHeight << endl;
@@ -326,3 +341,4 @@ public:
 };
 
 string Building::companyName = "Альянс";
+int Building::countOfBuildings = 0;
