@@ -158,6 +158,8 @@ int main()
 	b1.getBuilding();
 	b2.getBuilding();
 	/*......................................*/
+
+	/**/
 	cin.get();
 	return 0;
 }

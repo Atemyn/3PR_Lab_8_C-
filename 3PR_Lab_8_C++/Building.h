@@ -35,10 +35,12 @@ private:
 		this->stabilityFactor = stabilityFactor;
 	}
 public:
+	static string companyName;
 	/* Функция по выводу свойств экземпляра класса Building. */
 	void getBuilding()
 	{
 		cout << "Свойства данного здания:" << endl;
+		cout << "Название строительной компании: " << companyName << endl;
 		cout << "Тип здания: " << typeOfBuilding << endl;
 		cout << "Длина стороны основания: " << sideLength << endl;
 		cout << "Высота фундамента: " << basementHeight << endl;
@@ -322,3 +324,5 @@ public:
 		return result;
 	}
 };
+
+string Building::companyName = "Альянс";
