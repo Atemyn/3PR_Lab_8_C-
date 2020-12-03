@@ -75,7 +75,7 @@ public:
 			rewind(stdin);
 		}
 
-		openedWindowsAmount -= windowsToClose;
+		openedWindowsAmount -= windowsToClose; 
 	}
 	// Функция по сложению двух объектов класса Façade.
 	void addToFacade(Facade facadeToAdd)
